@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+	  <Title>Argument null or whitespace exception check</Title>
+	  <Author>Slawomir Moriak</Author>
+	  <Description>Creates an if instruction checking for argument value being null or whitespace string, throws an ArgumentNullException if it is so</Description>
+	  <Shortcut>anws</Shortcut>
+	  <SnippetTypes>
+		<SnippetType>Expansion</SnippetType>
+	  </SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Object>
+				<ID>argument</ID>
+				<Default>argument</Default>
+			</Object>
+		</Declarations>
+		<Code Language="CSharp">
+			<![CDATA[if(string.IsNullOrWhitespace($argument$))
+			{
+				throw new ArgumentNullException(nameof($argument$));
+			}$end$]]>
+		</Code>
+	</Snippet>
+  </CodeSnippet>
+</CodeSnippets>
