@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+	  <Title>Private readonly field declaration</Title>
+	  <Author>Slawomir Moriak</Author>
+	  <Description>Creates private readonly field declaration with type and name</Description>
+	  <Shortcut>fpr</Shortcut>
+	  <SnippetTypes>
+		<SnippetType>Expansion</SnippetType>
+	  </SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Object>
+				<ID>type</ID>
+				<Default>type</Default>
+			</Object>
+			<Object>
+				<ID>name</ID>
+				<Default>name</Default>
+			</Object>
+		</Declarations>
+		<Code Language="CSharp">
+			<![CDATA[private readonly $type$ $name$;]]>
+		</Code>
+	</Snippet>
+  </CodeSnippet>
+</CodeSnippets>

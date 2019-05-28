@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+	  <Title>Field assignment with parameter null exception check</Title>
+	  <Author>Slawomir Moriak</Author>
+	  <Description>Creates an cosntructor parameter field assignment with checking for argument value being null, throws an ArgumentNullException if it is so</Description>
+	  <Shortcut>anef</Shortcut>
+	  <SnippetTypes>
+		<SnippetType>Expansion</SnippetType>
+	  </SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Object>
+				<ID>field</ID>
+				<Default>field</Default>
+			</Object>
+			<Object>
+				<ID>parameter</ID>
+				<Default>parameter</Default>
+			</Object>
+		</Declarations>
+		<Code Language="CSharp">
+			<![CDATA[$field$ = $parameter$ ?? throw new ArgumentNullException(nameof($parameter$));$end$]]>
+		</Code>
+	</Snippet>
+  </CodeSnippet>
+</CodeSnippets>
